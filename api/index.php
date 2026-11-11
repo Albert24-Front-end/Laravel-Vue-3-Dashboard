@@ -49,7 +49,7 @@ foreach (glob('/tmp/storage/framework/views/*.php') ?: [] as $cachedView) {
 $dbSource = __DIR__ . '/../database/database.sqlite';
 $dbTarget = '/tmp/database.sqlite';
 if (file_exists($dbSource)) {
-    if (!file_exists($dbTarget) || filesize($dbTarget) < filesize($dbSource)) {
+    if (!file_exists($dbTarget) || @filemtime($dbSource) > @filemtime($dbTarget) || filesize($dbTarget) < filesize($dbSource)) {
         @copy($dbSource, $dbTarget);
     }
 }
