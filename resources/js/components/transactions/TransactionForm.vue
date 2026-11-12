@@ -8,12 +8,12 @@
       </div>
       <div>
         <h2 class="text-sm font-bold text-slate-900">Новая операция</h2>
-        <p class="text-xs text-slate-500">Добавить запись в базу PostgreSQL</p>
+        <p class="text-xs text-slate-500">Добавить запись в базу данных</p>
       </div>
     </div>
 
     <form @submit.prevent="handleSubmit" class="space-y-3.5">
-      
+
       <!-- Переключатель Тип операции: Выручка / Расход -->
       <div>
         <label class="block text-xs font-semibold text-slate-700 mb-1.5">Тип операции</label>
@@ -22,8 +22,8 @@
             type="button"
             @click="setType('revenue')"
             :class="[
-              form.type === 'revenue' 
-                ? 'bg-emerald-600 text-white font-bold shadow-xs' 
+              form.type === 'revenue'
+                ? 'bg-emerald-600 text-white font-bold shadow-xs'
                 : 'text-slate-600 hover:text-slate-900 font-medium',
               'py-1.5 text-xs rounded-lg transition cursor-pointer flex items-center justify-center gap-1.5'
             ]"
@@ -34,8 +34,8 @@
             type="button"
             @click="setType('expense')"
             :class="[
-              form.type === 'expense' 
-                ? 'bg-rose-600 text-white font-bold shadow-xs' 
+              form.type === 'expense'
+                ? 'bg-rose-600 text-white font-bold shadow-xs'
                 : 'text-slate-600 hover:text-slate-900 font-medium',
               'py-1.5 text-xs rounded-lg transition cursor-pointer flex items-center justify-center gap-1.5'
             ]"

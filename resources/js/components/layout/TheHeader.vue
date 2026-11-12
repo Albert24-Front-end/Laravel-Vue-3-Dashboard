@@ -1,7 +1,7 @@
 <template>
   <header class="bg-white border-b border-slate-200 sticky top-0 z-30 shadow-xs">
     <div class="max-w-420 mx-auto px-4 sm:px-6 lg:px-8 py-3.5">
-      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+      <div class="flex flex-col lg:flex-row lg:flex-wrap xl:flex-nowrap lg:items-center lg:justify-between gap-4">
 
         <!-- Логотип и название дашборда -->
         <div class="flex items-center gap-3">
@@ -11,10 +11,10 @@
             </svg>
           </div>
           <div>
-            <h1 class="text-lg font-bold text-slate-900 tracking-tight flex items-center gap-2">
+            <h1 class="text-md sm:text-lg font-bold text-slate-900 tracking-tight flex items-center gap-2">
               Финансовый дашборд
             </h1>
-            <p class="text-xs text-slate-500">Корпоративная финансовая аналитика и учет операций</p>
+            <p class="hidden sm:block text-xs text-slate-500">Корпоративная финансовая аналитика и учет операций</p>
           </div>
         </div>
 
@@ -45,7 +45,7 @@
           </select>
 
           <!-- Переключатель валюты -->
-          <div class="inline-flex rounded-lg bg-slate-100 p-0.5 border border-slate-200" title="Переключение отображения валюты">
+          <div class="inline-flex flex-wrap sm:flex-nowrap rounded-lg bg-slate-100 p-0.5 border border-slate-200" title="Переключение отображения валюты">
             <button
               v-for="(info, code) in currencies"
               :key="code"
@@ -64,7 +64,7 @@
           </div>
         </div>
           <!-- Кнопки действий: Импорт CSV, Скачать CSV, PDF -->
-          <div class="flex items-center gap-1.5 lg:ml-0">
+          <div class="flex flex-wrap sm:flex-nowrap items-center gap-1.5 lg:ml-0">
               <!-- Импорт из CSV -->
               <button
                   type="button"
